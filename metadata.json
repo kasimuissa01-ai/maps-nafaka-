@@ -1,0 +1,6 @@
+{
+  "name": "MAPS Nafaka - Premium B2B Grain Supply",
+  "description": "High-volume Grade-A Maize, Beans, and Rice for businesses, schools, and institutions with certified weight guarantee and scheduled logistics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

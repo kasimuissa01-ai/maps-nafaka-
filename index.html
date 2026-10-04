@@ -1,0 +1,1540 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAPS Nafaka - Premium B2B Grain Supply</title>
+    <meta
+      name="description"
+      content="High-volume Grade-A Maize, Beans, and Rice for businesses, schools, and institutions with certified weight guarantee and scheduled logistics."
+    />
+    <meta property="og:title" content="MAPS Nafaka - Premium B2B Grain Supply" />
+    <meta
+      property="og:description"
+      content="High-volume Grade-A Maize, Beans, and Rice for businesses, schools, and institutions with certified weight guarantee and scheduled logistics."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Font: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Playfair+Display:ital,wght@1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper.js CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+              serif: ['"Playfair Display"', 'serif'],
+            },
+            colors: {
+              brand: {
+                green: '#1B3821',          /* Deep forest green from reference */
+                greenDark: '#112516',
+                greenDeep: '#0b190f',
+                greenLight: '#2C5E35',
+                vibrant: '#5FA929',         /* Vibrant leaf/lime green CTA */
+                vibrantHover: '#529423',
+                vibrantLight: '#E8F5DF',
+                gold: '#E5A93C',            /* Harvest gold accent */
+                goldLight: '#FEF8EE',
+                bg: '#F5F7F2',              /* Exact soft ivory-sage background */
+                card: '#FFFFFF',
+                cardMuted: '#FAFBF7',
+                border: '#E3E8DC',
+                dark: '#111827',
+                muted: '#4B5563',
+              },
+            },
+            borderRadius: {
+              '4xl': '2rem',
+              '5xl': '2.5rem',
+            },
+            boxShadow: {
+              soft: '0 10px 30px -10px rgba(27, 56, 33, 0.06)',
+              card: '0 12px 36px -12px rgba(27, 56, 33, 0.1)',
+              elevated: '0 20px 48px -15px rgba(27, 56, 33, 0.15)',
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    <!-- Alpine.js CDN -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <style>
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: #F5F7F2;
+        color: #111827;
+      }
+      /* Swiper Custom Pagination & Controls */
+      .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background: #CBD5E1;
+        opacity: 1;
+        transition: all 0.3s ease;
+      }
+      .swiper-pagination-bullet-active {
+        width: 28px;
+        border-radius: 9999px;
+        background: #5FA929 !important;
+      }
+      /* High legibility typography */
+      p, li, span, input, select, textarea {
+        font-size: 1.125rem;
+      }
+      /* Smooth transitions */
+      .smooth-fade {
+        transition: all 0.25s ease-in-out;
+      }
+      /* Hide scrollbars for pill bars */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  </head>
+
+  <body
+    x-data="nafakaApp()"
+    class="min-h-screen bg-brand-bg text-brand-dark antialiased selection:bg-brand-vibrant selection:text-white"
+  >
+    <!-- TOP NOTIFICATION BAR -->
+    <div class="bg-brand-green text-white py-2 px-4 text-sm font-semibold border-b border-brand-greenDark">
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-brand-vibrant animate-pulse"></span>
+          <span class="text-emerald-100 font-medium">TBS &amp; EAC Certified Bulk Grain Supplier</span>
+        </div>
+        <div class="flex items-center gap-6 text-emerald-100 text-sm">
+          <a href="tel:+255785472456" class="hover:text-brand-vibrant transition flex items-center gap-1.5 font-medium">
+            <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-vibrant"></i>
+            <span>+255 785 472 456</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1. STICKY NAVBAR (Clean, floating pill-style header matching reference) -->
+    <header class="sticky top-0 z-40 bg-[#F5F7F2]/90 backdrop-blur-md border-b border-brand-border/60 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2.5 group">
+          <div class="w-10 h-10 rounded-xl bg-brand-green text-white flex items-center justify-center shadow-sm group-hover:scale-105 transition">
+            <svg class="w-6 h-6 text-brand-vibrant" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M2 22s5.5-2.5 9-6.5C14.5 11.5 15 5 15 5s-6.5.5-10.5 4C.5 12.5 2 22 2 22Z"/>
+              <path d="M15 5s4 1.5 6 4-1 6-4 6"/>
+              <path d="M12 9c2-1 4-1 6 0"/>
+            </svg>
+          </div>
+          <div class="flex items-baseline gap-1">
+            <span class="text-2xl font-black tracking-tight text-brand-green">MAPS</span>
+            <span class="text-2xl font-black tracking-tight text-brand-vibrant">Nafaka</span>
+          </div>
+        </a>
+
+        <!-- Centered Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8 text-base font-semibold text-gray-800">
+          <a href="#about" class="hover:text-brand-vibrant transition py-1">About Us</a>
+          <a href="#services" class="hover:text-brand-vibrant transition py-1">Services &amp; Process</a>
+          <a href="#products" class="hover:text-brand-vibrant transition py-1">Bulk Products</a>
+          <a href="#testimonials" class="hover:text-brand-vibrant transition py-1">Testimonials</a>
+          <a href="#calculator" class="hover:text-brand-vibrant transition py-1">Price Calculator</a>
+        </nav>
+
+        <!-- Right Action Icons & CTA Button -->
+        <div class="flex items-center gap-3">
+          <!-- WhatsApp Quick Icon -->
+          <a
+            href="https://wa.me/255785472456?text=Hello%20MAPS%20Nafaka,%20I%20would%20like%20to%20inquire%20about%20bulk%20grain%20supply."
+            target="_blank"
+            class="hidden sm:flex w-10 h-10 rounded-full bg-white border border-brand-border text-gray-700 hover:text-emerald-700 hover:border-emerald-500 items-center justify-center transition shadow-sm"
+            title="Chat on WhatsApp"
+          >
+            <i data-lucide="message-circle" class="w-5 h-5 text-emerald-600"></i>
+          </a>
+
+          <!-- RFQ Saved / Bag Indicator -->
+          <button
+            @click="orderModalOpen = true"
+            class="hidden sm:flex relative w-10 h-10 rounded-full bg-white border border-brand-border text-gray-700 hover:text-brand-vibrant items-center justify-center transition shadow-sm cursor-pointer"
+            title="Active RFQ Orders"
+          >
+            <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+            <span class="absolute -top-1 -right-1 w-4 h-4 bg-brand-vibrant text-white text-[10px] font-bold rounded-full flex items-center justify-center">1</span>
+          </button>
+
+          <!-- Primary CTA Button (Pill with circle arrow) -->
+          <button
+            @click="openQuoteModal('maize')"
+            class="bg-brand-vibrant hover:bg-brand-vibrantHover text-white font-bold text-base py-2.5 px-5 rounded-full shadow-sm hover:shadow transition flex items-center gap-2 cursor-pointer group"
+          >
+            <span>Get Quote</span>
+            <span class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center group-hover:translate-x-0.5 transition-transform">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+              </svg>
+            </span>
+          </button>
+
+          <!-- Mobile Hamburger Menu Button -->
+          <button
+            @click="mobileNav = !mobileNav"
+            class="md:hidden p-2 rounded-xl bg-white border border-brand-border text-gray-900 focus:outline-none"
+            aria-label="Toggle Menu"
+          >
+            <svg x-show="!mobileNav" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg x-show="mobileNav" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="display: none;">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div
+        x-show="mobileNav"
+        x-transition
+        class="md:hidden bg-white border-b border-brand-border px-6 py-5 shadow-xl"
+        style="display: none;"
+      >
+        <div class="flex flex-col gap-4 text-lg font-bold text-gray-900">
+          <a @click="mobileNav = false" href="#about" class="py-2 border-b border-gray-100">About Us</a>
+          <a @click="mobileNav = false" href="#services" class="py-2 border-b border-gray-100">Services &amp; Process</a>
+          <a @click="mobileNav = false" href="#products" class="py-2 border-b border-gray-100">Bulk Products</a>
+          <a @click="mobileNav = false" href="#testimonials" class="py-2 border-b border-gray-100">Testimonials</a>
+          <a @click="mobileNav = false" href="#calculator" class="py-2 border-b border-gray-100 text-brand-vibrant">Price Calculator</a>
+          <button
+            @click="mobileNav = false; openQuoteModal('maize')"
+            class="w-full bg-brand-vibrant text-white font-bold py-3.5 px-6 rounded-full text-center mt-2 flex items-center justify-center gap-2"
+          >
+            <span>Request Wholesale Quote</span>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-20">
+
+      <!-- 2. HERO SECTION (Multi-Panel Curved Layout matching reference) -->
+      <section class="mb-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+          
+          <!-- LEFT HERO PANEL (Large Atmospheric Feature Card with Headline & Actions) -->
+          <div class="lg:col-span-7 relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden min-h-[520px] md:min-h-[580px] p-6 sm:p-10 md:p-12 flex flex-col justify-between shadow-soft border border-emerald-950/20 bg-brand-green text-white">
+            <!-- Background Image with Dark Organic Gradient -->
+            <img
+              src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1400&q=80"
+              alt="Harvest field grain supply background"
+              class="absolute inset-0 w-full h-full object-cover opacity-35 mix-blend-luminosity scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-greenDark via-brand-green/85 to-brand-green/70"></div>
+
+            <!-- Top Tag / Pill -->
+            <div class="relative z-10">
+              <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-emerald-200 text-sm font-semibold mb-6">
+                <span class="w-2 h-2 rounded-full bg-brand-vibrant"></span>
+                <span>Verified Agricultural Cooperatives</span>
+              </div>
+
+              <!-- Main Headline (Editorial style with highlighted serif word like in reference) -->
+              <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold tracking-tight leading-[1.15] text-white max-w-xl">
+                Growing Your Grain Supply For Future with 
+                <span class="text-brand-vibrant font-serif italic font-normal">MAPS Nafaka</span> 
+                Handpicked Solutions.
+              </h1>
+
+              <!-- Subheadline -->
+              <p class="text-base sm:text-lg text-emerald-100 font-normal leading-relaxed mt-4 max-w-lg">
+                Let MAPS Nafaka be your institutional guide to building certified, moisture-guaranteed bulk food reserves delivered on schedule.
+              </p>
+
+              <!-- CTA Button (Pill with circle arrow) -->
+              <div class="mt-8 flex flex-wrap items-center gap-4">
+                <a
+                  href="#calculator"
+                  class="bg-brand-vibrant hover:bg-brand-vibrantHover text-white font-extrabold text-base sm:text-lg py-3.5 px-7 rounded-full shadow-lg transition flex items-center gap-3 group"
+                >
+                  <span>Order Bulk Now</span>
+                  <span class="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                    </svg>
+                  </span>
+                </a>
+
+                <a
+                  href="https://wa.me/255785472456?text=Hello%20MAPS%20Nafaka,%20I%20would%20like%20to%20order%20bulk%20grain."
+                  target="_blank"
+                  class="px-5 py-3.5 rounded-full bg-white/10 hover:bg-white/20 text-white font-bold text-base backdrop-blur-sm border border-white/20 transition flex items-center gap-2"
+                >
+                  <i data-lucide="message-circle" class="w-5 h-5 text-emerald-300"></i>
+                  <span>WhatsApp Quote</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Bottom Sub-Bar: Reviews & Product Category Pills (Exact match to reference bottom-left) -->
+            <div class="relative z-10 pt-8 mt-8 border-t border-white/15 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+              
+              <!-- Reviews with Avatars -->
+              <div class="flex items-center gap-3">
+                <div class="text-xs uppercase tracking-wider text-emerald-300 font-bold">Reviews &searr;</div>
+                <div class="flex items-center gap-2">
+                  <span class="text-xl font-black text-white">5k+</span>
+                  <div class="flex -space-x-2">
+                    <img class="w-7 h-7 rounded-full border-2 border-brand-green object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Buyer" />
+                    <img class="w-7 h-7 rounded-full border-2 border-brand-green object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Buyer" />
+                    <img class="w-7 h-7 rounded-full border-2 border-brand-green object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Buyer" />
+                  </div>
+                  <span class="text-xs text-emerald-200 font-semibold">Tons Supplied</span>
+                </div>
+              </div>
+
+              <!-- Product Categories Pills -->
+              <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+                <span class="text-xs uppercase tracking-wider text-emerald-300 font-bold shrink-0">Crops &gt;</span>
+                <span class="px-3 py-1 rounded-full bg-white/15 text-xs font-bold text-white shrink-0 hover:bg-white/25 cursor-pointer">🌽 Maize</span>
+                <span class="px-3 py-1 rounded-full bg-white/15 text-xs font-bold text-white shrink-0 hover:bg-white/25 cursor-pointer">🫘 Beans</span>
+                <span class="px-3 py-1 rounded-full bg-white/15 text-xs font-bold text-white shrink-0 hover:bg-white/25 cursor-pointer">🍚 Rice</span>
+                <span class="px-3 py-1 rounded-full bg-white/15 text-xs font-bold text-white shrink-0 hover:bg-white/25 cursor-pointer">🌾 Flour</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- CENTER HERO PANEL (Tall Organic Plant / Grain Image Card) -->
+          <div class="lg:col-span-3 relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden min-h-[300px] lg:min-h-full shadow-soft border border-brand-border bg-amber-50 group">
+            <img
+              src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=800&q=80"
+              alt="Grade A clean grain close-up"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6 flex items-center justify-between text-white">
+              <span class="text-sm font-extrabold uppercase tracking-widest bg-black/40 backdrop-blur-md px-3.5 py-1 rounded-full border border-white/20">
+                Origin Grain
+              </span>
+              <span class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center">
+                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </span>
+            </div>
+          </div>
+
+          <!-- RIGHT HERO PANEL (Standard Grade-A Clean Image Card) -->
+          <div class="lg:col-span-2 relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden min-h-[220px] lg:min-h-full shadow-soft border border-brand-border bg-brand-greenDark group flex flex-col justify-end">
+            <img
+              src="https://i.postimg.cc/zX1LKGgz/file-000000005e98820e98a5bcae2b974d61.png"
+              alt="Standard Grade-A Clean Grain"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-6 text-white z-10">
+              <span class="text-xs uppercase tracking-widest text-brand-vibrant font-extrabold block">Standard</span>
+              <span class="text-lg font-black text-white">Grade-A Clean</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 3. PRESENTATION & BENTO STATS SECTION ("Growing Green Together" equivalent from reference) -->
+      <section id="about" class="mb-24 pt-8">
+        
+        <!-- Section Header with About us indicator, centered text, and diagonal arrow -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12">
+          
+          <div class="lg:col-span-2">
+            <span class="text-sm font-bold uppercase tracking-wider text-gray-500 flex items-center gap-1">
+              <span>About us</span>
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 7l10 10M17 7v10H7"/></svg>
+            </span>
+          </div>
+
+          <div class="lg:col-span-8 text-left">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-brand-dark tracking-tight leading-tight">
+              Growing Grain <span class="underline decoration-brand-vibrant decoration-4 underline-offset-8">Together</span>
+            </h2>
+
+            <div class="grid sm:grid-cols-2 gap-8 mt-6">
+              <p class="text-base sm:text-lg text-gray-800 leading-relaxed font-normal">
+                At MAPS Nafaka, we see bulk grain supply as a lifeline of food security. Whether you are stocking an educational campus, a commercial posho mill, or a regional distribution warehouse, we are here to deliver with ease and precision.
+              </p>
+              <p class="text-base sm:text-lg text-gray-800 leading-relaxed font-normal">
+                Driven by direct cooperative sourcing, MAPS Nafaka offers certified Grade-A maize, sorted debris-free beans, and fragrant Kyela rice—all inspected, weighed, and delivered in one place.
+              </p>
+            </div>
+          </div>
+
+          <div class="lg:col-span-2 flex justify-start lg:justify-end">
+            <div class="w-12 h-12 rounded-full border border-brand-border bg-white flex items-center justify-center text-gray-800 hover:text-brand-vibrant hover:border-brand-vibrant transition">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 4-Card Bento Grid (Direct replication of cards UI from screenshot) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-5 items-stretch">
+          
+          <!-- Bento Card 1: 130+ Satisfied Customer with Portrait Image Card below -->
+          <div class="lg:col-span-3 flex flex-col justify-between">
+            <div class="mb-4">
+              <div class="text-4xl sm:text-5xl font-extrabold text-brand-dark tracking-tight">130+</div>
+              <div class="text-base font-bold text-gray-700 mt-1">Satisfied Institutional Clients</div>
+            </div>
+            <div class="rounded-3xl overflow-hidden aspect-[4/5] border border-brand-border shadow-sm group">
+              <img
+                src="https://i.postimg.cc/43jbpTGv/IMG-20260923-WA0012.jpg"
+                alt="MAPS Nafaka verified institutional grain delivery"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <!-- Bento Card 2: Wide Horizontal Image Card (Hands sorting clean grain / Second Satisfied Institution card) -->
+          <div class="lg:col-span-4 flex items-end">
+            <div class="w-full rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-auto lg:h-[290px] border border-brand-border shadow-sm group relative">
+              <img
+                src="https://i.postimg.cc/dVpTxmfL/IMG-20260923-WA0006(1).jpg"
+                alt="MAPS Nafaka bulk grain supply and institutional partnership"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+              <span class="absolute bottom-4 left-4 text-white text-xs font-bold bg-black/40 backdrop-blur-md px-3 py-1 rounded-full">
+                Guaranteed Quality &amp; Clean Supply
+              </span>
+            </div>
+          </div>
+
+          <!-- Bento Card 3: Deep Green Solid Bento Card (3k+ / 10k+ metric tons with diagonal arrow) -->
+          <div class="lg:col-span-3 bg-brand-green text-white rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-card border border-emerald-900 relative overflow-hidden group">
+            <div class="flex items-center justify-between">
+              <svg class="w-6 h-6 text-brand-vibrant" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 7l10 10M17 7v10H7"/></svg>
+              <span class="text-xs uppercase tracking-wider text-emerald-300 font-bold">Volume</span>
+            </div>
+
+            <div class="my-6">
+              <div class="text-4xl sm:text-5xl font-black text-white tracking-tight">10k+</div>
+              <div class="text-base font-bold text-emerald-100 mt-1">Metric Tons Supplied</div>
+            </div>
+
+            <!-- Visual element inside the card -->
+            <div class="rounded-2xl bg-white/10 p-3 border border-white/15 flex items-center justify-between">
+              <span class="text-xs font-semibold text-white">Annual Regional Flow</span>
+              <span class="w-2 h-2 rounded-full bg-brand-vibrant animate-ping"></span>
+            </div>
+          </div>
+
+          <!-- Bento Card 4: 20+ Service Providers / Logistics Centers with Image Card below -->
+          <div class="lg:col-span-2 flex flex-col justify-between">
+            <div class="mb-4">
+              <div class="text-4xl sm:text-5xl font-extrabold text-brand-dark tracking-tight">20+</div>
+              <div class="text-base font-bold text-gray-700 mt-1">Logistics Hubs</div>
+            </div>
+            <div class="rounded-3xl overflow-hidden aspect-[4/5] border border-brand-border shadow-sm group">
+              <img
+                src="https://i.postimg.cc/gkySdrpX/IMG-20260923-WA0010.jpg"
+                alt="MAPS Nafaka logistics hub and warehouse distribution"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- 4. SERVICES & QUALITY PROCESS SECTION ("Services ↗" with interactive accordion matching reference) -->
+      <section id="services" class="mb-24 pt-8">
+        
+        <!-- Header: Title with arrow and green pill button [View All ↗] on right -->
+        <div class="flex items-center justify-between mb-10">
+          <div class="flex items-center gap-2">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-brand-dark tracking-tight">
+              Services &amp; Process
+            </h2>
+            <svg class="w-6 h-6 text-gray-700 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          </div>
+
+          <a
+            href="#calculator"
+            class="bg-brand-vibrant hover:bg-brand-vibrantHover text-white font-bold text-sm sm:text-base py-2.5 px-5 rounded-full transition flex items-center gap-2 shadow-sm"
+          >
+            <span>View All</span>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          </a>
+        </div>
+
+        <!-- 2-Column Services Layout: Left tall inspection photo, Right interactive stacked accordion cards -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Left Column: Description & Quality Assurance Highlights -->
+          <div class="lg:col-span-4 flex flex-col justify-between gap-6">
+            <div>
+              <span class="text-xs uppercase tracking-wider font-extrabold text-brand-vibrant bg-brand-vibrantLight px-3 py-1 rounded-full">
+                Guaranteed Assurance
+              </span>
+              <p class="text-lg text-gray-800 leading-relaxed font-normal mt-4">
+                Transform your food procurement operations with our certified origin testing, optical destoning, and GPS-monitored fleet delivery straight into your silos and stores.
+              </p>
+            </div>
+
+            <div class="bg-white rounded-3xl p-6 border border-brand-border shadow-soft space-y-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-brand-vibrantLight text-brand-vibrant flex items-center justify-center font-bold shrink-0">
+                  <i data-lucide="shield-check" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <div class="font-extrabold text-gray-950 text-base">TBS Certified Standards</div>
+                  <div class="text-xs text-gray-600">Full compliance with East African grain code</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-brand-vibrantLight text-brand-vibrant flex items-center justify-center font-bold shrink-0">
+                  <i data-lucide="scale" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <div class="font-extrabold text-gray-950 text-base">Net Weight Scale Ticket</div>
+                  <div class="text-xs text-gray-600">Certified digital weighbridge manifests</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-brand-vibrantLight text-brand-vibrant flex items-center justify-center font-bold shrink-0">
+                  <i data-lucide="truck" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <div class="font-extrabold text-gray-950 text-base">Direct On-Site Delivery</div>
+                  <div class="text-xs text-gray-600">24-48 hr scheduled regional offloading</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Accordion Cards List (Alpine.js State) -->
+          <div class="lg:col-span-8 flex flex-col gap-3" x-data="{ activeService: 1 }">
+            
+            <!-- Service 1: Farmgate Inspection -->
+            <div
+              @click="activeService = 1"
+              :class="activeService === 1 ? 'bg-brand-green text-white p-7 shadow-card' : 'bg-white text-brand-dark p-5 border border-brand-border hover:bg-white/80'"
+              class="rounded-3xl transition-all duration-300 cursor-pointer"
+            >
+              <div class="flex items-center justify-between">
+                <h4 class="text-xl sm:text-2xl font-bold" :class="activeService === 1 ? 'text-white' : 'text-gray-900'">
+                  Farmgate Collection &amp; Moisture Testing
+                </h4>
+                <div
+                  :class="activeService === 1 ? 'bg-brand-vibrant text-white rotate-45' : 'bg-brand-bg text-gray-700'"
+                  class="w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300"
+                >
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                </div>
+              </div>
+              
+              <div x-show="activeService === 1" x-transition class="mt-4 pt-4 border-t border-white/15">
+                <p class="text-base text-emerald-100 leading-relaxed font-normal">
+                  Field agronomists test moisture directly at the cooperative collection point using calibrated grain probes. Any lot exceeding allowable moisture or displaying insect damage is rejected before loading.
+                </p>
+                <div class="mt-4 flex items-center gap-3 text-sm font-semibold text-brand-vibrant">
+                  <span>✓ Moisture Guaranteed ≤ 13%</span>
+                  <span>•</span>
+                  <span>✓ 100% Cooperative Origin Traceability</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 2: Cleaning, Destoning & Sorting -->
+            <div
+              @click="activeService = 2"
+              :class="activeService === 2 ? 'bg-brand-green text-white p-7 shadow-card' : 'bg-white text-brand-dark p-5 border border-brand-border hover:bg-white/80'"
+              class="rounded-3xl transition-all duration-300 cursor-pointer"
+            >
+              <div class="flex items-center justify-between">
+                <h4 class="text-xl sm:text-2xl font-bold" :class="activeService === 2 ? 'text-white' : 'text-gray-900'">
+                  Air-Screen Destoning &amp; Optical Sortex
+                </h4>
+                <div
+                  :class="activeService === 2 ? 'bg-brand-vibrant text-white rotate-45' : 'bg-brand-bg text-gray-700'"
+                  class="w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300"
+                >
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                </div>
+              </div>
+              
+              <div x-show="activeService === 2" x-transition class="mt-4 pt-4 border-t border-white/15">
+                <p class="text-base text-emerald-100 leading-relaxed font-normal">
+                  Mechanical destoning eliminates stones, chaff, and heavy debris. High-speed optical sortex cameras inspect grain color and geometry, isolating discolored kernels for an unblemished commercial batch.
+                </p>
+                <div class="mt-4 flex items-center gap-3 text-sm font-semibold text-brand-vibrant">
+                  <span>✓ 0.0% Stone Contamination</span>
+                  <span>•</span>
+                  <span>✓ Foreign Matter &lt; 0.5%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 3: Certified Weighbridge -->
+            <div
+              @click="activeService = 3"
+              :class="activeService === 3 ? 'bg-brand-green text-white p-7 shadow-card' : 'bg-white text-brand-dark p-5 border border-brand-border hover:bg-white/80'"
+              class="rounded-3xl transition-all duration-300 cursor-pointer"
+            >
+              <div class="flex items-center justify-between">
+                <h4 class="text-xl sm:text-2xl font-bold" :class="activeService === 3 ? 'text-white' : 'text-gray-900'">
+                  Weighbridge Calibration &amp; Net Weight Guarantee
+                </h4>
+                <div
+                  :class="activeService === 3 ? 'bg-brand-vibrant text-white rotate-45' : 'bg-brand-bg text-gray-700'"
+                  class="w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300"
+                >
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                </div>
+              </div>
+              
+              <div x-show="activeService === 3" x-transition class="mt-4 pt-4 border-t border-white/15">
+                <p class="text-base text-emerald-100 leading-relaxed font-normal">
+                  We eliminate shortage leakage entirely. Every dispatch is weighed on digital commercial weighbridges with signed weight slips. Every 50kg or 90kg sack is machine calibrated.
+                </p>
+                <div class="mt-4 flex items-center gap-3 text-sm font-semibold text-brand-vibrant">
+                  <span>✓ Net Weight Manifest</span>
+                  <span>•</span>
+                  <span>✓ Certified Scale Guarantee</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 4: Fleet Logistics -->
+            <div
+              @click="activeService = 4"
+              :class="activeService === 4 ? 'bg-brand-green text-white p-7 shadow-card' : 'bg-white text-brand-dark p-5 border border-brand-border hover:bg-white/80'"
+              class="rounded-3xl transition-all duration-300 cursor-pointer"
+            >
+              <div class="flex items-center justify-between">
+                <h4 class="text-xl sm:text-2xl font-bold" :class="activeService === 4 ? 'text-white' : 'text-gray-900'">
+                  Dedicated Fleet Delivery &amp; Warehouse Offloading
+                </h4>
+                <div
+                  :class="activeService === 4 ? 'bg-brand-vibrant text-white rotate-45' : 'bg-brand-bg text-gray-700'"
+                  class="w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300"
+                >
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                </div>
+              </div>
+              
+              <div x-show="activeService === 4" x-transition class="mt-4 pt-4 border-t border-white/15">
+                <p class="text-base text-emerald-100 leading-relaxed font-normal">
+                  Tarp-sealed, GPS-tracked freight trucks transport orders directly from processing plants to your silos. Our crew coordinates offloading with your facility team for zero downtime.
+                </p>
+                <div class="mt-4 flex items-center gap-3 text-sm font-semibold text-brand-vibrant">
+                  <span>✓ 24-48 Hour Scheduled Dispatch</span>
+                  <span>•</span>
+                  <span>✓ On-Site Offloading Support</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 5: Institutional Long-Term Supply Contracts -->
+            <div
+              @click="activeService = 5"
+              :class="activeService === 5 ? 'bg-brand-green text-white p-7 shadow-card' : 'bg-white text-brand-dark p-5 border border-brand-border hover:bg-white/80'"
+              class="rounded-3xl transition-all duration-300 cursor-pointer"
+            >
+              <div class="flex items-center justify-between">
+                <h4 class="text-xl sm:text-2xl font-bold" :class="activeService === 5 ? 'text-white' : 'text-gray-900'">
+                  Institutional Term Contracts &amp; Price Locking
+                </h4>
+                <div
+                  :class="activeService === 5 ? 'bg-brand-vibrant text-white rotate-45' : 'bg-brand-bg text-gray-700'"
+                  class="w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300"
+                >
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                </div>
+              </div>
+              
+              <div x-show="activeService === 5" x-transition class="mt-4 pt-4 border-t border-white/15">
+                <p class="text-base text-emerald-100 leading-relaxed font-normal">
+                  Protect your budget against seasonal price spikes. We offer 3-month, 6-month, and annual term contracts for boarding schools, healthcare complexes, and industrial millers with guaranteed buffer stock.
+                </p>
+                <div class="mt-4 flex items-center gap-3 text-sm font-semibold text-brand-vibrant">
+                  <span>✓ Fixed Spot Rates</span>
+                  <span>•</span>
+                  <span>✓ Priority Harvest Allocation</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- 5. MOST POPULAR PRODUCTS / CROPS CAROUSEL (Direct copy of the Cards UI from reference!) -->
+      <section id="products" class="mb-24 pt-8">
+        
+        <!-- Header with title, highlighted word badge, and [View All ↗] pill button -->
+        <div class="flex items-center justify-between mb-10">
+          <div class="flex items-center gap-3">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-brand-dark tracking-tight">
+              Most Popular <span class="bg-brand-vibrantLight text-brand-vibrant px-3 py-0.5 rounded-xl font-bold">Products</span>
+            </h2>
+            <svg class="w-6 h-6 text-gray-700 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <!-- Swiper Navigation Arrows -->
+            <button class="products-prev w-10 h-10 rounded-full bg-white border border-brand-border text-gray-800 hover:text-brand-vibrant flex items-center justify-center shadow-sm cursor-pointer transition">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="products-next w-10 h-10 rounded-full bg-white border border-brand-border text-gray-800 hover:text-brand-vibrant flex items-center justify-center shadow-sm cursor-pointer transition">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Products Swiper Container -->
+        <div class="swiper products-swiper pb-10">
+          <div class="swiper-wrapper">
+            
+            <!-- PRODUCT CARD 1: Grade-A White Maize (Mahindi) -->
+            <div class="swiper-slide h-auto">
+              <div class="bg-white rounded-3xl p-4 sm:p-5 border border-brand-border shadow-soft hover:shadow-card hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full">
+                
+                <div>
+                  <!-- Image with top tags -->
+                  <div class="relative rounded-2xl overflow-hidden aspect-square bg-[#FDFBF7] mb-4">
+                    <img
+                      src="https://i.postimg.cc/RCWhjnc0/20261004-170024.png"
+                      alt="Grade A White Maize"
+                      class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                    />
+                    <!-- Red tag matching reference [New Harvest] -->
+                    <span class="absolute top-3 left-3 bg-[#E54B4B] text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-sm">
+                      New Harvest
+                    </span>
+                    <!-- Heart / spec icon button top right -->
+                    <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm text-gray-700 hover:text-red-500 flex items-center justify-center shadow-sm transition">
+                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    </button>
+                  </div>
+
+                  <!-- Category Subtitle -->
+                  <span class="text-xs uppercase tracking-wider font-bold text-gray-500 block mb-1">Cereal &amp; Milling Grain</span>
+
+                  <!-- Title -->
+                  <h3 class="text-xl font-extrabold text-gray-950 mb-2 leading-snug">
+                    Grade-A White Maize (Mahindi)
+                  </h3>
+
+                  <!-- Price & Discount Tag -->
+                  <div class="flex items-baseline gap-2 mb-2">
+                    <span class="text-2xl font-black text-brand-dark">TZS 720k</span>
+                    <span class="text-xs text-gray-500 line-through">TZS 780k</span>
+                    <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Per Ton</span>
+                  </div>
+
+                  <!-- 5 Gold Stars Rating -->
+                  <div class="flex items-center gap-1 text-[#F5A623] mb-4">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    <span class="text-xs font-bold text-gray-500 ml-1.5">(4.9/5)</span>
+                  </div>
+                </div>
+
+                <!-- Bottom Actions: Cart Icon Button + Bright Green Pill Button -->
+                <div class="flex items-center gap-2 pt-2 border-t border-gray-100">
+                  <button
+                    @click="openQuoteModal('maize')"
+                    class="w-12 h-12 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-800 flex items-center justify-center transition shrink-0 cursor-pointer"
+                    title="View Specs"
+                  >
+                    <i data-lucide="info" class="w-5 h-5"></i>
+                  </button>
+
+                  <button
+                    @click="openQuoteModal('maize')"
+                    class="w-full bg-brand-vibrant hover:bg-brand-vibrantHover text-white font-extrabold text-base py-3 px-4 rounded-xl shadow-sm transition flex items-center justify-center gap-2 cursor-pointer group"
+                  >
+                    <span>Request Quote</span>
+                    <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- PRODUCT CARD 2: Select Beans (Maharage ya Njano) -->
+            <div class="swiper-slide h-auto">
+              <div class="bg-white rounded-3xl p-4 sm:p-5 border border-brand-border shadow-soft hover:shadow-card hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full">
+                
+                <div>
+                  <!-- Image with top tags -->
+                  <div class="relative rounded-2xl overflow-hidden aspect-square bg-[#FDFBF7] mb-4">
+                    <img
+                      src="https://i.postimg.cc/dVpTxmfL/IMG-20260923-WA0006(1).jpg"
+                      alt="Select Yellow Beans"
+                      class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                    />
+                    <span class="absolute top-3 left-3 bg-[#E54B4B] text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-sm">
+                      Destoned
+                    </span>
+                    <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm text-gray-700 hover:text-red-500 flex items-center justify-center shadow-sm transition">
+                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    </button>
+                  </div>
+
+                  <!-- Category Subtitle -->
+                  <span class="text-xs uppercase tracking-wider font-bold text-gray-500 block mb-1">Legumes &amp; Pulses</span>
+
+                  <!-- Title -->
+                  <h3 class="text-xl font-extrabold text-gray-950 mb-2 leading-snug">
+                    Select Beans (Maharage ya Njano)
+                  </h3>
+
+                  <!-- Price & Discount Tag -->
+                  <div class="flex items-baseline gap-2 mb-2">
+                    <span class="text-2xl font-black text-brand-dark">TZS 2.4M</span>
+                    <span class="text-xs text-gray-500 line-through">TZS 2.6M</span>
+                    <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Per Ton</span>
+                  </div>
+
+                  <!-- 5 Gold Stars Rating -->
+                  <div class="flex items-center gap-1 text-[#F5A623] mb-4">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    <span class="text-xs font-bold text-gray-500 ml-1.5">(5.0/5)</span>
+                  </div>
+                </div>
+
+                <!-- Bottom Actions -->
+                <div class="flex items-center gap-2 pt-2 border-t border-gray-100">
+                  <button
+                    @click="openQuoteModal('beans')"
+                    class="w-12 h-12 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-800 flex items-center justify-center transition shrink-0 cursor-pointer"
+                    title="View Specs"
+                  >
+                    <i data-lucide="info" class="w-5 h-5"></i>
+                  </button>
+
+                  <button
+                    @click="openQuoteModal('beans')"
+                    class="w-full bg-brand-vibrant hover:bg-brand-vibrantHover text-white font-extrabold text-base py-3 px-4 rounded-xl shadow-sm transition flex items-center justify-center gap-2 cursor-pointer group"
+                  >
+                    <span>Request Quote</span>
+                    <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- PRODUCT CARD 3: Super Kyela Mchele (Aromatic Rice) -->
+            <div class="swiper-slide h-auto">
+              <div class="bg-white rounded-3xl p-4 sm:p-5 border border-brand-border shadow-soft hover:shadow-card hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full">
+                
+                <div>
+                  <!-- Image with top tags -->
+                  <div class="relative rounded-2xl overflow-hidden aspect-square bg-[#FDFBF7] mb-4">
+                    <img
+                      src="https://i.postimg.cc/qqTFXK0H/Placing-logo-on-product-20261004151255.jpg"
+                      alt="Super Kyela Rice"
+                      class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                    />
+                    <span class="absolute top-3 left-3 bg-[#E54B4B] text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-sm">
+                      Super Grade 1
+                    </span>
+                    <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm text-gray-700 hover:text-red-500 flex items-center justify-center shadow-sm transition">
+                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    </button>
+                  </div>
+
+                  <!-- Category Subtitle -->
+                  <span class="text-xs uppercase tracking-wider font-bold text-gray-500 block mb-1">Aromatic Rice</span>
+
+                  <!-- Title -->
+                  <h3 class="text-xl font-extrabold text-gray-950 mb-2 leading-snug">
+                    Super Kyela Rice (Mchele)
+                  </h3>
+
+                  <!-- Price & Discount Tag -->
+                  <div class="flex items-baseline gap-2 mb-2">
+                    <span class="text-2xl font-black text-brand-dark">TZS 2.8M</span>
+                    <span class="text-xs text-gray-500 line-through">TZS 3.0M</span>
+                    <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Per Ton</span>
+                  </div>
+
+                  <!-- 5 Gold Stars Rating -->
+                  <div class="flex items-center gap-1 text-[#F5A623] mb-4">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    <span class="text-xs font-bold text-gray-500 ml-1.5">(4.9/5)</span>
+                  </div>
+                </div>
+
+                <!-- Bottom Actions -->
+                <div class="flex items-center gap-2 pt-2 border-t border-gray-100">
+                  <button
+                    @click="openQuoteModal('rice')"
+                    class="w-12 h-12 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-800 flex items-center justify-center transition shrink-0 cursor-pointer"
+                    title="View Specs"
+                  >
+                    <i data-lucide="info" class="w-5 h-5"></i>
+                  </button>
+
+                  <button
+                    @click="openQuoteModal('rice')"
+                    class="w-full bg-brand-vibrant hover:bg-brand-vibrantHover text-white font-extrabold text-base py-3 px-4 rounded-xl shadow-sm transition flex items-center justify-center gap-2 cursor-pointer group"
+                  >
+                    <span>Request Quote</span>
+                    <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+          <!-- Swiper Pagination -->
+          <div class="products-pagination flex justify-center gap-2 mt-8"></div>
+        </div>
+
+      </section>
+
+      <!-- 6. INTERACTIVE BULK ORDER CALCULATOR SECTION -->
+      <section id="calculator" class="mb-24 pt-8">
+        
+        <div class="bg-white rounded-[2.5rem] p-6 sm:p-10 md:p-14 border border-brand-border shadow-soft">
+          
+          <div class="max-w-2xl mb-10">
+            <span class="text-xs uppercase tracking-wider font-extrabold text-brand-vibrant bg-brand-vibrantLight px-3 py-1 rounded-full">
+              Live Price Estimator
+            </span>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-brand-dark tracking-tight mt-3">
+              Calculate Your Bulk Grain Consignment
+            </h2>
+            <p class="text-base sm:text-lg text-gray-700 mt-2 font-normal">
+              Select your crop, enter the required tonnage, and generate an immediate spot estimate with direct WhatsApp proforma dispatch.
+            </p>
+          </div>
+
+          <form @submit.prevent="submitQuoteRequest" class="space-y-8">
+            
+            <!-- Step 1: Product Selection Cards -->
+            <div>
+              <label class="block text-lg font-bold text-gray-900 mb-3">
+                1. Select Grain Product
+              </label>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                
+                <label
+                  :class="selectedProduct === 'maize' ? 'border-brand-vibrant bg-emerald-50/50 ring-2 ring-brand-vibrant' : 'border-brand-border bg-brand-cardMuted hover:border-gray-300'"
+                  class="border-2 rounded-2xl p-4 cursor-pointer flex items-center justify-between transition"
+                >
+                  <input type="radio" value="maize" x-model="selectedProduct" class="sr-only" />
+                  <div class="flex items-center gap-3">
+                    <span class="text-2xl">🌽</span>
+                    <div>
+                      <div class="font-extrabold text-gray-950">White Maize (Mahindi)</div>
+                      <div class="text-xs text-gray-600 font-semibold">Grade A &bull; Moisture &le; 13%</div>
+                    </div>
+                  </div>
+                  <div x-show="selectedProduct === 'maize'" class="w-6 h-6 rounded-full bg-brand-vibrant text-white flex items-center justify-center">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                  </div>
+                </label>
+
+                <label
+                  :class="selectedProduct === 'beans' ? 'border-brand-vibrant bg-emerald-50/50 ring-2 ring-brand-vibrant' : 'border-brand-border bg-brand-cardMuted hover:border-gray-300'"
+                  class="border-2 rounded-2xl p-4 cursor-pointer flex items-center justify-between transition"
+                >
+                  <input type="radio" value="beans" x-model="selectedProduct" class="sr-only" />
+                  <div class="flex items-center gap-3">
+                    <span class="text-2xl">🫘</span>
+                    <div>
+                      <div class="font-extrabold text-gray-950">Select Beans (Maharage)</div>
+                      <div class="text-xs text-gray-600 font-semibold">Njano &bull; Uyole &bull; Destoned</div>
+                    </div>
+                  </div>
+                  <div x-show="selectedProduct === 'beans'" class="w-6 h-6 rounded-full bg-brand-vibrant text-white flex items-center justify-center">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                  </div>
+                </label>
+
+                <label
+                  :class="selectedProduct === 'rice' ? 'border-brand-vibrant bg-emerald-50/50 ring-2 ring-brand-vibrant' : 'border-brand-border bg-brand-cardMuted hover:border-gray-300'"
+                  class="border-2 rounded-2xl p-4 cursor-pointer flex items-center justify-between transition"
+                >
+                  <input type="radio" value="rice" x-model="selectedProduct" class="sr-only" />
+                  <div class="flex items-center gap-3">
+                    <span class="text-2xl">🍚</span>
+                    <div>
+                      <div class="font-extrabold text-gray-950">Super Kyela Rice (Mchele)</div>
+                      <div class="text-xs text-gray-600 font-semibold">Fragrant &bull; Grade 1 Long Grain</div>
+                    </div>
+                  </div>
+                  <div x-show="selectedProduct === 'rice'" class="w-6 h-6 rounded-full bg-brand-vibrant text-white flex items-center justify-center">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                  </div>
+                </label>
+
+              </div>
+            </div>
+
+            <!-- Step 2: Quantity & Packaging -->
+            <div class="grid sm:grid-cols-2 gap-6">
+              
+              <div>
+                <label class="block text-lg font-bold text-gray-900 mb-2">
+                  2. Required Volume
+                </label>
+                <div class="flex">
+                  <input
+                    type="number"
+                    min="0.5"
+                    step="0.5"
+                    x-model.number="quantity"
+                    required
+                    class="w-full px-5 py-3.5 border-2 border-r-0 border-brand-border rounded-l-2xl text-lg font-extrabold text-gray-900 focus:outline-none focus:border-brand-vibrant"
+                  />
+                  <select
+                    x-model="unit"
+                    class="px-4 py-3.5 border-2 border-brand-border bg-gray-50 rounded-r-2xl text-base font-bold text-gray-900 focus:outline-none"
+                  >
+                    <option value="tons">Metric Tons (Tons)</option>
+                    <option value="kg">Kilograms (Kg)</option>
+                  </select>
+                </div>
+                <div class="text-sm text-gray-600 mt-2 font-medium">
+                  MOQ: 1 Ton (Maize), 500 kg (Beans &amp; Rice).
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-lg font-bold text-gray-900 mb-2">
+                  3. Bag Packaging
+                </label>
+                <select
+                  x-model="packaging"
+                  class="w-full px-5 py-3.5 border-2 border-brand-border rounded-2xl text-base font-bold text-gray-900 focus:outline-none focus:border-brand-vibrant bg-white"
+                >
+                  <option value="50kg">50kg Heavy Woven Polypropylene Bags</option>
+                  <option value="90kg">90kg / 100kg Heavy Grain Sacks</option>
+                  <option value="25kg">25kg Retail Sacks (Rice only)</option>
+                  <option value="bulk">Bulk Silo / Container Load</option>
+                </select>
+                <div class="text-sm text-gray-600 mt-2 font-medium">
+                  Estimated Bag Count: <strong class="text-brand-vibrant font-bold" x-text="calculateBags()"></strong>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Step 3: Destination & Phone -->
+            <div class="grid sm:grid-cols-3 gap-6">
+              <div>
+                <label class="block text-lg font-bold text-gray-900 mb-2">
+                  4. Delivery Destination
+                </label>
+                <input
+                  type="text"
+                  x-model="destination"
+                  required
+                  placeholder="e.g. Dar es Salaam, Dodoma..."
+                  class="w-full px-4 py-3.5 border-2 border-brand-border rounded-2xl text-base font-medium text-gray-900 focus:outline-none focus:border-brand-vibrant"
+                />
+              </div>
+
+              <div>
+                <label class="block text-lg font-bold text-gray-900 mb-2">
+                  5. Business / School
+                </label>
+                <input
+                  type="text"
+                  x-model="businessName"
+                  required
+                  placeholder="e.g. Apex High School / Millers"
+                  class="w-full px-4 py-3.5 border-2 border-brand-border rounded-2xl text-base font-medium text-gray-900 focus:outline-none focus:border-brand-vibrant"
+                />
+              </div>
+
+              <div>
+                <label class="block text-lg font-bold text-gray-900 mb-2">
+                  6. WhatsApp Contact
+                </label>
+                <input
+                  type="tel"
+                  x-model="phone"
+                  required
+                  placeholder="+255 785 472 456"
+                  class="w-full px-4 py-3.5 border-2 border-brand-border rounded-2xl text-base font-medium text-gray-900 focus:outline-none focus:border-brand-vibrant"
+                />
+              </div>
+            </div>
+
+            <!-- Total Valuation Box -->
+            <div class="bg-brand-bg rounded-3xl p-6 border border-brand-border flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div>
+                <span class="text-xs uppercase tracking-wider text-gray-600 font-extrabold">Estimated Spot Consignment Total</span>
+                <div class="text-3xl sm:text-4xl font-black text-brand-dark mt-1" x-text="calculateEstimatedTotal()"></div>
+                <div class="text-sm text-gray-700 mt-1">Includes digital weighbridge certified manifest and on-site offloading coordination.</div>
+              </div>
+
+              <button
+                type="submit"
+                class="bg-brand-vibrant hover:bg-brand-vibrantHover text-white font-extrabold text-lg py-4 px-8 rounded-full shadow transition flex items-center justify-center gap-3 cursor-pointer shrink-0"
+              >
+                <span>Submit Order RFQ</span>
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+      </section>
+
+      <!-- 7. TESTIMONIALS SECTION -->
+      <section id="testimonials" class="mb-24 pt-8">
+        
+        <div class="flex items-center justify-between mb-10">
+          <div>
+            <span class="text-xs uppercase tracking-wider font-extrabold text-brand-vibrant bg-brand-vibrantLight px-3 py-1 rounded-full">
+              Verified Partners
+            </span>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-brand-dark tracking-tight mt-3">
+              Trusted by Institutions &amp; Wholesalers
+            </h2>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <button class="testimonials-prev w-10 h-10 rounded-full bg-white border border-brand-border text-gray-800 hover:text-brand-vibrant flex items-center justify-center shadow-sm cursor-pointer transition">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="testimonials-next w-10 h-10 rounded-full bg-white border border-brand-border text-gray-800 hover:text-brand-vibrant flex items-center justify-center shadow-sm cursor-pointer transition">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="swiper testimonials-swiper pb-10">
+          <div class="swiper-wrapper">
+            
+            <div class="swiper-slide h-auto">
+              <div class="bg-white rounded-3xl p-8 border border-brand-border shadow-soft flex flex-col justify-between h-full">
+                <div>
+                  <div class="flex items-center gap-1 text-[#F5A623] mb-4">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <blockquote class="text-xl font-medium text-gray-900 leading-relaxed italic mb-6">
+                    &ldquo;MAPS Nafaka eliminated our school canteen supply delays. The rice quality is consistently clean with zero debris.&rdquo;
+                  </blockquote>
+                </div>
+                <div class="pt-6 border-t border-gray-100 flex items-center gap-4">
+                  <div class="w-12 h-12 rounded-full bg-brand-green text-white font-bold flex items-center justify-center text-lg">
+                    JM
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-bold text-gray-950">J. Mboya</h4>
+                    <p class="text-sm text-gray-700">School Procurement Officer &bull; St. Augustine Campuses</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide h-auto">
+              <div class="bg-white rounded-3xl p-8 border border-brand-border shadow-soft flex flex-col justify-between h-full">
+                <div>
+                  <div class="flex items-center gap-1 text-[#F5A623] mb-4">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <blockquote class="text-xl font-medium text-gray-900 leading-relaxed italic mb-6">
+                    &ldquo;Finding reliable bulk maize with under 13% moisture was always a struggle until we partnered with MAPS.&rdquo;
+                  </blockquote>
+                </div>
+                <div class="pt-6 border-t border-gray-100 flex items-center gap-4">
+                  <div class="w-12 h-12 rounded-full bg-brand-vibrant text-white font-bold flex items-center justify-center text-lg">
+                    HS
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-bold text-gray-950">H. Said</h4>
+                    <p class="text-sm text-gray-700">Grain Wholesaler &bull; Kariakoo Commercial Hub</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide h-auto">
+              <div class="bg-white rounded-3xl p-8 border border-brand-border shadow-soft flex flex-col justify-between h-full">
+                <div>
+                  <div class="flex items-center gap-1 text-[#F5A623] mb-4">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <blockquote class="text-xl font-medium text-gray-900 leading-relaxed italic mb-6">
+                    &ldquo;The weighbridge certificate is accurate down to the kilogram. Never experienced a single shortage issue with their fleet.&rdquo;
+                  </blockquote>
+                </div>
+                <div class="pt-6 border-t border-gray-100 flex items-center gap-4">
+                  <div class="w-12 h-12 rounded-full bg-brand-green text-white font-bold flex items-center justify-center text-lg">
+                    AM
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-bold text-gray-950">A. Mwakyoma</h4>
+                    <p class="text-sm text-gray-700">Mill Operations Lead &bull; Kilimo Flour Mills</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="testimonials-pagination flex justify-center gap-2 mt-8"></div>
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- 8. FOOTER (Deep Green, Clean and Minimalist) -->
+    <footer class="bg-brand-greenDark text-white pt-16 pb-12 border-t border-brand-greenDeep">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-14">
+          
+          <div class="lg:col-span-2">
+            <div class="flex items-center gap-2.5 mb-5">
+              <div class="w-9 h-9 rounded-xl bg-brand-vibrant text-white flex items-center justify-center font-bold">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 22s5.5-2.5 9-6.5C14.5 11.5 15 5 15 5s-6.5.5-10.5 4C.5 12.5 2 22 2 22Z"/><path d="M15 5s4 1.5 6 4-1 6-4 6"/></svg>
+              </div>
+              <span class="text-2xl font-black tracking-tight text-white">MAPS <span class="text-brand-vibrant">Nafaka</span></span>
+            </div>
+            <p class="text-base text-emerald-100/90 leading-relaxed max-w-sm mb-6">
+              East Africa's leading B2B bulk grain supply partner. Connecting smallholder cooperatives directly with institutional kitchens, commercial posho millers, and wholesalers.
+            </p>
+            <div class="flex items-center gap-3 text-xs font-bold text-emerald-200">
+              <span class="bg-white/10 px-3 py-1.5 rounded-lg border border-white/10">TBS Certified</span>
+              <span class="bg-white/10 px-3 py-1.5 rounded-lg border border-white/10">EAC Food Grade</span>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-bold text-white mb-4">Bulk Crops</h4>
+            <ul class="space-y-2.5 text-base text-emerald-100">
+              <li><a href="#products" class="hover:text-brand-vibrant transition">Grade-A White Maize</a></li>
+              <li><a href="#products" class="hover:text-brand-vibrant transition">Select Yellow Beans</a></li>
+              <li><a href="#products" class="hover:text-brand-vibrant transition">Super Kyela Mchele</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-bold text-white mb-4">Navigation</h4>
+            <ul class="space-y-2.5 text-base text-emerald-100">
+              <li><a href="#about" class="hover:text-brand-vibrant transition">About MAPS Nafaka</a></li>
+              <li><a href="#services" class="hover:text-brand-vibrant transition">Services &amp; Process</a></li>
+              <li><a href="#testimonials" class="hover:text-brand-vibrant transition">Client Reviews</a></li>
+              <li><a href="#calculator" class="hover:text-brand-vibrant transition">Price Calculator</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-bold text-white mb-4">Warehouse &amp; Sales</h4>
+            <div class="space-y-3 text-sm text-emerald-100">
+              <p>Plot 42, Bandari Industrial Logistics Zone, Kurasini, Dar es Salaam, Tanzania</p>
+              <p class="font-bold text-white"><a href="tel:+255785472456" class="hover:text-brand-vibrant transition">+255 785 472 456</a></p>
+              <p class="font-bold text-emerald-300"><a href="https://wa.me/255785472456" target="_blank" class="hover:text-white transition">WhatsApp: +255 785 472 456</a></p>
+              <p>orders@mapsnafaka.co.tz</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-emerald-200">
+          <p>&copy; 2026 MAPS Nafaka Ltd. All rights reserved.</p>
+          <div class="flex items-center gap-6">
+            <span>Net Weight Guarantee</span>
+            <span>&bull;</span>
+            <span>TBS Inspected</span>
+            <span>&bull;</span>
+            <span>Direct Dispatch</span>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- ORDER CONFIRMATION MODAL -->
+    <div
+      x-show="orderModalOpen"
+      class="fixed inset-0 z-50 overflow-y-auto"
+      style="display: none;"
+      x-transition
+    >
+      <div class="fixed inset-0 bg-black/70 backdrop-blur-sm" @click="orderModalOpen = false"></div>
+      <div class="min-h-full flex items-center justify-center p-4">
+        <div class="relative bg-white rounded-3xl max-w-lg w-full p-8 shadow-2xl border border-gray-200 z-10" @click.stop>
+          <button @click="orderModalOpen = false" class="absolute top-6 right-6 p-2 rounded-xl text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition cursor-pointer">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+          </button>
+
+          <div class="text-center mb-6">
+            <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-brand-vibrant flex items-center justify-center mx-auto mb-3">
+              <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <h3 class="text-2xl font-black text-gray-950">Wholesale RFQ Ready</h3>
+            <p class="text-sm text-gray-600 mt-1">Reference Code:</p>
+            <span class="inline-block bg-brand-vibrantLight text-brand-vibrant font-mono font-extrabold text-base px-3.5 py-1 rounded-lg mt-1" x-text="rfqCode || 'RFQ-NAFAKA-2026-LIVE'"></span>
+          </div>
+
+          <div class="bg-brand-bg rounded-2xl p-4 border border-brand-border mb-6 space-y-2 text-base">
+            <div class="flex justify-between"><span class="text-gray-600">Product:</span><strong class="text-gray-900" x-text="getProductName()"></strong></div>
+            <div class="flex justify-between"><span class="text-gray-600">Quantity:</span><strong class="text-gray-900"><span x-text="quantity"></span> <span x-text="unit"></span></strong></div>
+            <div class="flex justify-between"><span class="text-gray-600">Packaging:</span><strong class="text-gray-900" x-text="packaging"></strong></div>
+            <div class="flex justify-between"><span class="text-gray-600">Destination:</span><strong class="text-gray-900" x-text="destination"></strong></div>
+            <div class="flex justify-between pt-2 border-t border-gray-200"><span class="text-gray-600">Estimated Total:</span><strong class="text-brand-vibrant font-black" x-text="calculateEstimatedTotal()"></strong></div>
+          </div>
+
+          <div class="flex flex-col gap-3">
+            <a
+              :href="getWhatsAppOrderUrl()"
+              target="_blank"
+              class="w-full bg-[#25D366] hover:bg-[#1EBE5D] text-white font-extrabold text-base py-3.5 px-6 rounded-full shadow text-center flex items-center justify-center gap-2 transition"
+            >
+              <i data-lucide="message-circle" class="w-5 h-5"></i>
+              <span>Send via WhatsApp for Instant Proforma</span>
+            </a>
+            <button @click="orderModalOpen = false" class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-full text-center transition cursor-pointer">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUICK QUOTE MODAL -->
+    <div
+      x-show="quoteModalOpen"
+      class="fixed inset-0 z-50 overflow-y-auto"
+      style="display: none;"
+      x-transition
+    >
+      <div class="fixed inset-0 bg-black/70 backdrop-blur-sm" @click="quoteModalOpen = false"></div>
+      <div class="min-h-full flex items-center justify-center p-4">
+        <div class="relative bg-white rounded-3xl max-w-md w-full p-8 shadow-2xl border border-gray-200 z-10" @click.stop>
+          <button @click="quoteModalOpen = false" class="absolute top-5 right-5 p-2 rounded-xl text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition cursor-pointer">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+          </button>
+
+          <div class="mb-5">
+            <span class="text-xs uppercase tracking-wider font-extrabold text-brand-vibrant bg-brand-vibrantLight px-3 py-1 rounded-full">
+              Instant Quote
+            </span>
+            <h3 class="text-2xl font-black text-gray-950 mt-2">
+              Quote for <span class="text-brand-vibrant" x-text="getProductName()"></span>
+            </h3>
+            <p class="text-sm text-gray-600 mt-1">Specify volume to receive guaranteed spot pricing.</p>
+          </div>
+
+          <div class="space-y-4 text-left">
+            <div>
+              <label class="block text-sm font-bold text-gray-900 mb-1">Required Volume</label>
+              <div class="flex">
+                <input type="number" min="0.5" step="0.5" x-model.number="quantity" class="w-full px-4 py-2.5 border border-r-0 border-gray-300 rounded-l-xl text-base font-bold" />
+                <select x-model="unit" class="px-3 py-2.5 border border-gray-300 bg-gray-50 rounded-r-xl text-sm font-bold">
+                  <option value="tons">Tons</option>
+                  <option value="kg">Kg</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-bold text-gray-900 mb-1">Delivery Destination</label>
+              <input type="text" x-model="destination" placeholder="e.g. Dar es Salaam" class="w-full px-4 py-2.5 border border-gray-300 rounded-xl text-base" />
+            </div>
+
+            <div>
+              <label class="block text-sm font-bold text-gray-900 mb-1">Institution / Company</label>
+              <input type="text" x-model="businessName" placeholder="School or Wholesale Name" class="w-full px-4 py-2.5 border border-gray-300 rounded-xl text-base" />
+            </div>
+
+            <div>
+              <label class="block text-sm font-bold text-gray-900 mb-1">WhatsApp / Phone</label>
+              <input type="tel" x-model="phone" placeholder="+255 785 472 456" class="w-full px-4 py-2.5 border border-gray-300 rounded-xl text-base" />
+            </div>
+
+            <button
+              @click="quoteModalOpen = false; submitQuoteRequest()"
+              class="w-full bg-brand-vibrant hover:bg-brand-vibrantHover text-white font-extrabold text-base py-3.5 px-6 rounded-full shadow transition cursor-pointer mt-2"
+            >
+              Get Spot Proforma
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Swiper.js Bundle Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Alpine.js Application Logic -->
+    <script>
+      function nafakaApp() {
+        return {
+          mobileNav: false,
+          quoteModalOpen: false,
+          orderModalOpen: false,
+          selectedProduct: 'maize',
+          quantity: 5,
+          unit: 'tons',
+          packaging: '50kg',
+          destination: 'Dar es Salaam',
+          businessName: '',
+          phone: '',
+          rfqCode: '',
+
+          pricePerTon: {
+            maize: 720000,
+            beans: 2400000,
+            rice: 2800000,
+          },
+
+          getProductName() {
+            if (this.selectedProduct === 'maize') return 'Grade-A White Maize';
+            if (this.selectedProduct === 'beans') return 'Select Sorted Beans';
+            if (this.selectedProduct === 'rice') return 'Super Kyela Rice';
+            return this.selectedProduct;
+          },
+
+          calculateBags() {
+            let totalKg = this.unit === 'tons' ? this.quantity * 1000 : this.quantity;
+            if (this.packaging === '50kg') {
+              return Math.ceil(totalKg / 50) + ' Sacks (50kg)';
+            } else if (this.packaging === '90kg') {
+              return Math.ceil(totalKg / 90) + ' Sacks (90kg)';
+            } else if (this.packaging === '25kg') {
+              return Math.ceil(totalKg / 25) + ' Sacks (25kg)';
+            } else {
+              return 'Bulk Container Loading';
+            }
+          },
+
+          calculateEstimatedTotal() {
+            let totalTons = this.unit === 'tons' ? this.quantity : this.quantity / 1000;
+            let rate = this.pricePerTon[this.selectedProduct] || 720000;
+            let estTZS = totalTons * rate;
+            let formattedTZS = new Intl.NumberFormat('en-TZ').format(Math.round(estTZS));
+            let estUSD = new Intl.NumberFormat('en-US').format(Math.round(estTZS / 2600));
+            return `TZS ${formattedTZS} (~$${estUSD} USD)`;
+          },
+
+          openQuoteModal(crop) {
+            this.selectedProduct = crop;
+            this.quoteModalOpen = true;
+            this.$nextTick(() => {
+              if (window.lucide) window.lucide.createIcons();
+            });
+          },
+
+          submitQuoteRequest() {
+            const randomNum = Math.floor(1000 + Math.random() * 9000);
+            this.rfqCode = `RFQ-NAFAKA-${new Date().getFullYear()}-${randomNum}`;
+            this.orderModalOpen = true;
+            this.$nextTick(() => {
+              if (window.lucide) window.lucide.createIcons();
+            });
+          },
+
+          getWhatsAppOrderUrl() {
+            const text = `Hello MAPS Nafaka,%0A%0AI would like to place an order quote request:%0A- RFQ: ${this.rfqCode || 'RFQ-NAFAKA-2026-LIVE'}%0A- Product: ${this.getProductName()}%0A- Quantity: ${this.quantity} ${this.unit}%0A- Packaging: ${this.packaging}%0A- Destination: ${this.destination}%0A- Institution: ${this.businessName || 'N/A'}%0A- Phone: ${this.phone || 'N/A'}%0A%0APlease provide verified proforma invoice.`;
+            return `https://wa.me/255785472456?text=${text}`;
+          },
+        };
+      }
+
+      // Initialize Swiper & Lucide on load
+      document.addEventListener('DOMContentLoaded', function () {
+        if (window.lucide) {
+          window.lucide.createIcons();
+        }
+
+        // Swiper for Products
+        new Swiper('.products-swiper', {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          grabCursor: true,
+          navigation: {
+            nextEl: '.products-next',
+            prevEl: '.products-prev',
+          },
+          pagination: {
+            el: '.products-pagination',
+            clickable: true,
+          },
+          breakpoints: {
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 24,
+            },
+          },
+        });
+
+        // Swiper for Testimonials
+        new Swiper('.testimonials-swiper', {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          loop: true,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+          },
+          navigation: {
+            nextEl: '.testimonials-next',
+            prevEl: '.testimonials-prev',
+          },
+          pagination: {
+            el: '.testimonials-pagination',
+            clickable: true,
+          },
+          breakpoints: {
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 24,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 24,
+            },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
